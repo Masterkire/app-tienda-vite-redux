@@ -68,6 +68,7 @@ const App = () => {
   }
 
   const store = createStore(reducer);
+  console.log(store.getState());
 
   return ( 
     <Provider store={store}>
@@ -81,6 +82,7 @@ const App = () => {
           <Routes>
             <Route path="*" element={<Error404 />}/>      
             <Route path="/" element={<Inicio />}/>      
+            <Route path="/app-tienda-vite-redux/" element={<Inicio />}/>      
             <Route path="/Blog" element={<Blog />}/>      
             <Route path="/Tienda" element={
               <Tienda 
